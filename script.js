@@ -1,11 +1,20 @@
-fetch("https://ghibliapi.herokuapp.com/films")
-    .then(data => {
-        return data.json();
-    })
-    .then(result =>{ console.log(result)
-        for (i = 0; i < result.length; i++) {
-        document.getElementById('test').innerHTML += result[i].title + "<BR>" + "<BR>"
-        }
-    })
 
-    document.querySelector('video').play();
+function scrollTitles(result) {
+    let titleTab = [];
+    for (i = 0; i < result.length; i++) {
+        titleTab.push(result[i].title);
+    }
+
+    //console.log(result.length);
+    for (i = 0; i < result.length; i++) {
+        document.getElementById('filmslist').innerHTML += '<option value="">' + result[i].title + '</option>';
+    }
+}
+
+
+
+
+
+
+
+
