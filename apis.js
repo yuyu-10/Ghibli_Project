@@ -6,6 +6,8 @@ const result = fetch("https://ghibliapi.herokuapp.com/films")
 
 const res = fetch("https://ghibliapi.herokuapp.com/films")
     .then(data => data.json())
-    .then(resu => styleTimeline(resu))
+    .then(resu => styleTimelineB(resu))
 
-
+const resu = fetch("https://ghibliapi.herokuapp.com/films")
+    .then(data => data.json())
+    .then(resu => styleTimelineR(resu))

@@ -29,29 +29,56 @@ function scrollTitles(result) {
 function displayTimelineRound(result) {
 
     let box = document.getElementById('box-timeline');
+    let rond = document.getElementById('box-timeline');
 
 
-    for (i = 0; i <= result.length; i++) {
+    for (i = 0; i < result.length; i++) {
+
+        console.log(result.length)
+
+
+
+        rond.innerHTML += '<div class="rond r' + (i + 1) + '"' + 'data-anim="' + (i + 1) + '"' + '></div>';
+    }
+
+    for (i = 0; i < result.length; i++) {
 
         console.log(result.length)
 
         box.innerHTML += '<div class="box b' + (i + 1) + '"' + 'data-anim="' + (i + 1) + '"' + '><h2>' + result[i].title + '</h2><p>' + result[i].release_date + '</p></div>';
 
-        box.innerHTML += '<div class="rond r' + (i + 1) + '"' + 'data-anim="' + (i + 1) + '"' + '></div>';
-
-
 
     }
-    console.log(box)
+
 }
 
 
-function styleTimeline(resultat) {
+function styleTimelineB(resultat) {
 
-    console.log('test')
-    for (i = 2; i <= resultat.length; i++) {
-        let boxes = document.getElementsByClassName(`b${i}`)
+    let boxes = document.getElementsByClassName("box")
+    console.log(boxes)
+    for (i = 1; i <= resultat.length; i++) {
+
         console.log(boxes)
+        let px = i * 306
+        boxes[i].style.top += px + "px"
+
+        if ((i + 1) % 2 == 0) {
+            boxes[i].style.left += "calc(50% + 270px)"
+        } else {
+            boxes[i].style.left += "calc(50% - 270px)"
+        }
+
+    }
+
+}
+
+function styleTimelineR(resultat) {
+    let circles = document.getElementsByClassName("rond");
+
+    for (i = 1; i <= resultat.length; i++) {
+        let px = i * 306;
+        circles[i].style.top += px + "px";
     }
 }
 
@@ -68,15 +95,14 @@ allBoxes.forEach(box => {
 
         if (allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')) {
 
-            let tween = gsap.from(box, { y: -50, opacity: 0, duration: 0.5 })
+            let tween = gsap.from(box, { y: -50, opacity: 0, duration: 5 })
 
             let scene = new ScrollMagic.Scene({
                 triggerElement: allRonds[i],
                 reverse: true
             })
-                .setTween(tween)
-                // .addIndicators()
-                .addTo(controller)
+            scene.setTween(tween).addTo(controller)
+            // .addIndicators()
 
         }
 
