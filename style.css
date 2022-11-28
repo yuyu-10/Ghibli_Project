@@ -54,20 +54,9 @@ header {
 /* 1000 - 160 + 80 / 3 =~ 306 */
 .r1 {
     top: 80px;
+    background-image: url('calcifer_emoji.png');
+    background-size: contain;
 }
-
-/* .r2 {
-    top: 386px;
-}
-
-.r3 {
-    top: 692px;
-}
-
-.r4 {
-    top: 1000px;
-} */
-
 
 .box {
     color: #333;
@@ -83,6 +72,11 @@ header {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    opacity: 1;
+}
+
+.box:hover{
+    opacity:0.5;
 }
 
 .b1 {
@@ -90,23 +84,71 @@ header {
     left: calc(50% - 270px);
 }
 
-/* .b2 {
-    top: 386px;
-    left: calc(50% + 270px);
-}
-
-.b3 {
-    top: 692px;
-    left: calc(50% - 270px);
-}
-
-.b4 {
-    top: 1000px;
-    left: calc(50% + 270px);
-} */
-
 .box p {
     line-height: 20px;
     font-size: 18px;
     margin: 10px 0 20px 0;
+    font-family: Impact;
+}
+
+.box a {
+    color: #000;
+    font-family: Impact;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    padding-top: 0;
+    text-decoration: underline;
+}
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Jost', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 240px 0;
+    color: #f1f1f1;
+}
+
+
+
+
+
+.btn {
+    display: block;
+    /* background: midnightblue; */
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .ligne {
+        position: relative;
+        left: 200px;
+    }
+    .rond {
+        left: calc(50% + 200px);
+    }
+    .box {
+        left: calc(50% - 50px)
+    }
+
 }

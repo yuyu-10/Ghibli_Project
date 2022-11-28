@@ -18,3 +18,7 @@ const res = fetch("https://ghibliapi.herokuapp.com/films")
 const resu = fetch("https://ghibliapi.herokuapp.com/films")
     .then(data => data.json())
     .then(resu => styleTimelineR(resu))
+
+const resul = fetch("https://ghibliapi.herokuapp.com/films")
+    .then(data => data.json())
+    .then(resul => b1(resul))
