@@ -2,28 +2,42 @@
 //----- DOM Elements:
 
 let list = document.getElementById('filmslist');
+
 let datesTimeline = document.getElementsByClassName('release_dates_timeline');
 let titlesTimeline = document.getElementsByClassName('films_title_timeline');
 
-
-
 function scrollTitles(result) {
-    // let titleTab = [];
-    // for (i = 0; i < result.length; i++) {
-    //     titleTab.push(result[i].title);
-    // }
-
-    //let link = document.createElement("a")
 
     for (i = 0; i < result.length; i++) {
-
-        //const newContent = document.createTextNode(result[i].title);
-        list.innerHTML += '<option value="" class="title">' + result[i].title + '</option>';
-
-        // let title = document.getElementsByClassName('title');
-        // title.innerHTML = '<a href="https://www.google.com">' + result[i].title + '</a>';
+        list.innerHTML += `<option value="${i}" class="title"><a href="films_page/pages_index.html?film=${result[i].title}"> ${result[i].title}</a></option>`;
 
     }
+
+    list.addEventListener('change', function () {
+        let valeur = list.options[list.selectedIndex].value;
+        valeur = parseInt(valeur);
+        console.log(list.selectedIndex)
+
+        console.log(result)
+
+        for (i = valeur; i < result.length; i++) {
+
+            list.innerHTML += `<option value="${i}" class="title"><a href="films_page/pages_index.html?filmselect=${result[i].title}"> ${result[i].title}</a></option>`;
+
+            //localStorage.setItem('filmselect', `${result[i].title}`);
+
+            //window.location.href = `films_page/pages_index.html?filmselect=${result[i].title}`
+
+            //console.log(window.location.href)
+
+            //changeURL(`http://127.0.0.1:5500/films_page/pages_index.html?film=${result[i].title}`)
+        }
+    })
+
+    // function changeURL(url) {
+    //     window.location.href = url;
+    // }
+
 }
 
 function displayTimelineRound(result) {
@@ -31,24 +45,17 @@ function displayTimelineRound(result) {
     let box = document.getElementById('box-timeline');
     let rond = document.getElementById('box-timeline');
 
-
     for (i = 0; i < result.length; i++) {
-
-        console.log(result.length)
-
-
-
-        rond.innerHTML += '<div class="rond r' + (i + 1) + '"' + 'data-anim="' + (i + 1) + '"' + '></div>';
+        rond.innerHTML += `<div class="rond r${i + 1}" data-anim="${i + 1}"></div>`;
     }
 
     for (i = 0; i < result.length; i++) {
 
-        console.log(result.length)
-
-        box.innerHTML += '<div class="box b' + (i + 1) + '"' + 'data-anim="' + (i + 1) + '"' + '><h2>' + result[i].title + '</h2><p>' + result[i].release_date + '</p></div>';
-
+        box.innerHTML += `<div class="box b${i + 1}" data-anim="${i + 1}"><h2><a href="films_page/pages_index.html?film=${result[i].title}">${result[i].title}</a></h2><p>${result[i].release_date}</p></div>`;
 
     }
+
+    return box;
 
 }
 
@@ -56,10 +63,8 @@ function displayTimelineRound(result) {
 function styleTimelineB(resultat) {
 
     let boxes = document.getElementsByClassName("box")
-    console.log(boxes)
-    for (i = 1; i <= resultat.length; i++) {
 
-        console.log(boxes)
+    for (i = 1; i <= resultat.length; i++) {
         let px = i * 306
         boxes[i].style.top += px + "px"
 
@@ -70,6 +75,7 @@ function styleTimelineB(resultat) {
         }
 
     }
+
 
 }
 
@@ -82,33 +88,51 @@ function styleTimelineR(resultat) {
     }
 }
 
+const test = fetch("https://ghibliapi.herokuapp.com/films")
+    .then(data => {
+        return data.json()
+    })
+
+// console.log(test)
+
+// displayTimelineRound(test);
+
+// const allRonds = document.getElementsByClassName('rond');
+// const allBoxes = document.getElementsByClassName('box');
+
+// console.log(allRonds);
+// console.log(allBoxes);
+
+// const controller = new ScrollMagic.Controller()
 
 
-const allRonds = document.querySelectorAll('.rond');
-const allBoxes = document.querySelectorAll('.box');
 
-const controller = new ScrollMagic.Controller()
+// allBoxes.forEach(box => {
+//     console.log(box)
 
-allBoxes.forEach(box => {
+//     for (i = 0; i < allRonds.length; i++) {
 
-    for (i = 0; i < allRonds.length; i++) {
+//         console.log(allRonds[i])
 
-        if (allRonds[i].getAttribute('data-anim') === box.getAttribute('data-anim')) {
+//         if (allRonds[i].getAttribute('data-anim') = box.getAttribute('data-anim')) {
 
-            let tween = gsap.from(box, { y: -50, opacity: 0, duration: 5 })
 
-            let scene = new ScrollMagic.Scene({
-                triggerElement: allRonds[i],
-                reverse: true
-            })
-            scene.setTween(tween).addTo(controller)
-            // .addIndicators()
+//             let tween = gsap.from(box, { y: -50, opacity: 0, duration: 0.5 })
 
-        }
+//             let scene = new ScrollMagic.Scene({
+//                 triggerElement: allRonds[i],
+//                 reverse: true
+//             })
+//                 .setTween(tween)
+//                 .addTo(controller)
+//             // .addIndicators()
 
-    }
+//         }
 
-})
+//     }
+
+
+// })
 
 
 
