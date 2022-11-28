@@ -9,6 +9,7 @@ const result = fetch("https://ghibliapi.herokuapp.com/films")
 const resultat = fetch("https://ghibliapi.herokuapp.com/films")
     .then(data => data.json())
     .then(res => displayTimelineRound(res))
+    .then(res => animation())
 
 
 const res = fetch("https://ghibliapi.herokuapp.com/films")
