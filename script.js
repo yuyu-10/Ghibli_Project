@@ -10,6 +10,7 @@ function scrollTitles(result) {
 
     for (i = 0; i < result.length; i++) {
         list.innerHTML += `<option value="films_page/pages_index.html?film=${result[i].title}" class="title"> ${result[i].title}</option>`;
+
     }
 
     list.addEventListener('change', function () {
@@ -34,12 +35,12 @@ function displayTimelineRound(result) {
 
 }
 
-
 function styleTimelineB(resultat) {
 
     let boxes = document.getElementsByClassName("box")
 
     for (i = 1; i <= resultat.length; i++) {
+
         let px = i * 306
         boxes[i].style.top += px + "px"
 
@@ -51,14 +52,21 @@ function styleTimelineB(resultat) {
     }
 }
 
+// function r1(resultat) {
+//     r1.style.backgroundImage = `url('calcifer_emoji.png')`;
+// }
+
 function styleTimelineR(resultat) {
     let circles = document.getElementsByClassName("rond");
 
     for (i = 1; i <= resultat.length; i++) {
         let px = i * 306;
         circles[i].style.top += px + "px";
+        circles[i].style.background += `url('calcifer_emoji.png')`;
+        circles[i].style.backgroundSize = "contain";
     }
 }
+
 
 // const test = fetch("https://ghibliapi.herokuapp.com/films")
 //     .then(data => {
@@ -101,16 +109,4 @@ function animation() {
 
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

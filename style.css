@@ -54,20 +54,9 @@ header {
 /* 1000 - 160 + 80 / 3 =~ 306 */
 .r1 {
     top: 80px;
+    background-image: url('calcifer_emoji.png');
+    background-size: contain;
 }
-
-/* .r2 {
-    top: 386px;
-}
-
-.r3 {
-    top: 692px;
-}
-
-.r4 {
-    top: 1000px;
-} */
-
 
 .box {
     color: #333;
@@ -95,20 +84,21 @@ header {
     left: calc(50% - 270px);
 }
 
-/* .b2 {
-    top: 386px;
-    left: calc(50% + 270px);
+.box p {
+    line-height: 20px;
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+    font-family: Impact;
 }
 
-.b3 {
-    top: 692px;
-    left: calc(50% - 270px);
+.box a {
+    color: #000;
+    font-family: Impact;
 }
 
-.b4 {
-    top: 1000px;
-    left: calc(50% + 270px);
-} */
+a:link {
+    text-decoration: none;
+}
 
 .box p {
     line-height: 20px;
