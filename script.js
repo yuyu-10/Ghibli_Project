@@ -41,7 +41,7 @@ function styleTimelineB(resultat) {
 
     for (i = 1; i <= resultat.length; i++) {
 
-        let px = i * 306
+        let px = i * 200;
         boxes[i].style.top += px + "px"
 
         if ((i + 1) % 2 == 0) {
@@ -60,7 +60,7 @@ function styleTimelineR(resultat) {
     let circles = document.getElementsByClassName("rond");
 
     for (i = 1; i <= resultat.length; i++) {
-        let px = i * 306;
+        let px = i * 200;;
         circles[i].style.top += px + "px";
         circles[i].style.background += `url('calcifer_emoji.png')`;
         circles[i].style.backgroundSize = "contain";
@@ -87,7 +87,6 @@ function animation() {
     const controller = new ScrollMagic.Controller()
 
     allBoxes.forEach(box => {
-        // console.log(box)
 
         for (i = 0; i < allRonds.length; i++) {
 
@@ -101,7 +100,6 @@ function animation() {
                 })
                     .setTween(tween)
                     .addTo(controller)
-                // .addIndicators()
 
             }
 

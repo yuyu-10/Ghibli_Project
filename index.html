@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Karla:wght@200;700;800&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -15,7 +19,7 @@
 
         <div id="header">
             <div style="width: 30%;">
-                <img src="/image/pngegg.png" alt="" id="ghibli_logo">
+                <a href="/index.html"><img src="/image/pngegg.png" alt="" id="ghibli_logo"></a>
             </div>
             <div>
                 <select name="list" id="filmslist">
@@ -27,14 +31,28 @@
     </header>
 
     <main>
-        <div>
+        <div id="background_video">
             <video preload="auto" width="100%" autoplay id="top" loop>
-                <source src="AMV.mp4" type="video/mp4">
+                <source src="/Ghibli[AMV].mp4" type="video/mp4">
             </video>
         </div>
 
         <section id="box-timeline">
             <div class="ligne"></div>
+        </section>
+
+        <section id="director">
+
+            <div id="background">
+                <a href="http://en.wikipedia.org/wiki/Hayao_Miyazaki">
+                    <h1>HAYAO MIYAZAKI</h1>
+                </a>
+            </div>
+
+            <div>
+                <p>Hayao Miyazaki (宮崎駿, born January 5, 1941) is a Japanese film director,
+                    producer, screenwriter, animator, author, manga artist, and co-founder of Studio Ghibli.</p>
+            </div>
         </section>
 
     </main>

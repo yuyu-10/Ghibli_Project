@@ -1,6 +1,6 @@
-/* body {
-    background: #333;
-} */
+body {
+    margin: 0;
+}
 
 header {
     margin: 1% 10% 10% 10%;
@@ -19,17 +19,13 @@ header {
 }
 
 #box-timeline {
-    /* width: 100%; */
-    margin: 1% 10%;
-    /* height: 1500px; */
-    /* background: #f1f1f1; */
+    margin: 10%;
     position: relative;
-    padding: 80px 0 450px 0;
-    /* margin-bottom: 100px; */
+    /* padding: 80px 0 450px 0; */
 }
 
 .ligne {
-    height: 6400px;
+    height: 4200px;
     width: 8px;
     margin: 0 auto;
     background: #333;
@@ -51,9 +47,8 @@ header {
 }
 
 
-/* 1000 - 160 + 80 / 3 =~ 306 */
 .r1 {
-    top: 80px;
+    top: 0px;
     background-image: url('calcifer_emoji.png');
     background-size: contain;
 }
@@ -61,9 +56,6 @@ header {
 .box {
     color: #333;
     min-width: 250px;
-    /* width: 300px; */
-    /* min-height: 200px; */
-    /* padding: 20px; */
     padding: 5px 20px;
     border-radius: 3px;
     height: auto;
@@ -80,7 +72,7 @@ header {
 }
 
 .b1 {
-    top: 80px;
+    top: 0px;
     left: calc(50% - 270px);
 }
 
@@ -118,4 +110,49 @@ a:link {
 a:hover {
     padding-top: 0;
     text-decoration: underline;
+}
+
+#director {
+    /* margin: 20% 0 10% 0; */
+    /* padding-top: 50px; */
+    text-align: center;
+    margin-top: 20%;
+    /* background: floralwhite; */
+    /* padding-bottom: 80px; */
+}
+
+#background {
+    background: linear-gradient(rgba(239, 201, 76, 0.20), rgba(239, 201, 157, 0.20)), url(https://variety.com/wp-content/uploads/2013/09/hayao-miyazaki.jpg) no-repeat fixed center;
+    height: 600px;
+    position: relative;
+}
+
+
+
+#background a {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-decoration: none;
+}
+
+/* #director img {
+    border-radius: 50%;
+    max-width: 380px;
+    margin: 3%;
+} */
+
+#director div p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.5em;
+    /* width: 80%; */
+    margin: 5%;
+    /* text-align: center; */
+}
+
+#director div h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    font-size: 4em;
+    letter-spacing: 0.5rem;
 }

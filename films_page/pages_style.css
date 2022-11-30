@@ -1,0 +1,104 @@
+/* @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans:300,400'); */
+
+body {
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2em;
+    letter-spacing: 0.5rem;
+}
+
+body,
+html {
+    font-family: 'Karla', sans-serif;
+    height: 100%;
+}
+
+header {
+    margin: 1% 10% 10% 10%;
+}
+
+#ghibli_logo {
+    width: 30%;
+}
+
+/* #grey_banner {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
+    height: 510px;
+    max-height: 500px;
+    
+} */
+
+/* #movie_banner {
+    width: 100%;
+} */
+
+/* #background_image {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+
+    /* filter: brightness(80%); 
+} */
+
+
+
+#movie_banner {
+    /* background: linear-gradient(rgba(239, 201, 76, 0.20), rgba(239, 201, 157, 0.20)); */
+    height: 700px;
+    position: relative;
+
+    /* background-size: cover; */
+    /* width: 100%; */
+}
+
+#movie_banner h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+}
+
+#titles {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    right: 25%;
+}
+
+/* color: white; */
+/* left: 0; */
+/* position: absolute; */
+/* text-align: center; */
+/* top: 45%; */
+/* width: 100%; */
+
+
+#description {
+    text-align: center;
+    width: 70%;
+    margin: 10% auto;
+    font-size: 1.5em;
+}
+
+#film_information h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    /* margin: 0 50%; */
+}
+
+.line {
+    border-bottom: 3px solid #EFC94C;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#film_information p {
+    text-align: center;
+}

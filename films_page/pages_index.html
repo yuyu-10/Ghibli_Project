@@ -6,53 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Karla:wght@200;700;800&family=Roboto:ital,wght@0,100;0,400;1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/films_page/pages_style.css">
+
 </head>
 
 <body>
     <header>
-        <p><a href="/index.html">Acceuil</a></p>
+        <div>
+            <a href="/index.html"><img src="/image/pngegg.png" alt="" id="ghibli_logo"></a>
+        </div>
     </header>
 
     <main>
 
+        <!-- titres -->
         <section id="titles_section">
 
-            <!-- movie banner -->
             <div id="movie_banner">
-
+                <div id="titles">
+                    <h1 id="title"></h1>
+                    <h1 id="original_title"></h1>
+                    <h1 id="original_title_romanised"></h1>
+                </div>
             </div>
 
-            <!-- titres -->
-            <h1 id="title"></h1>
-            <h1 id="original_title"></h1>
-            <h1 id="original_title_romanised"></h1>
         </section>
 
-        <section>
+        <section id="description">
             <!-- description -->
-            <div id="movie_description"></div>
-        </section>
-
-        <section>
-            <!-- film informations-->
-            <h2 id="movie_director"></h2>
-            <h2 id="movie_producer"></h2>
-            <h2 id="movie_release_date"></h2>
-            <h2 id="movie_time"></h2>
-        </section>
-
-        <section>
-            <!-- personnages -->
-            <div id="movie_people">
-                <!-- name, gender, age, eye-color, hair-color, -->
-                <!-- <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul> -->
+            <div>
+                <p id="movie_description"></p>
             </div>
+        </section>
+
+        <section id="film_information">
+            <!-- film informations-->
+            <h2 class="info">Director</h2>
+            <div class="line"></div>
+            <p id="movie_director"></p>
+
+            <h2 class="info">Producer</h2>
+            <div class="line"></div>
+            <p id="movie_producer"></p>
+
+            <h2 class="info">Release date</h2>
+            <div class="line"></div>
+            <p id="movie_release_date"></p>
+
+            <h2 class="info">Time</h2>
+            <div class="line"></div>
+            <p id="movie_time"></p>
+
+            <!-- <h2 class="info">People</h2>
+            <div class="line"></div>
+            <div id="people_carte">
+                <p id="people_name"></p>
+                <p id="people_gender"></p>
+                <p id="people_age"></p>
+                <p id="people_eye_color"></p>
+                <p id="people_hair_color"></p>
+            </div> -->
+
+
+            <!-- personnages -->
+            <!-- <div id="movie_people">
+                <div id="people_name"></div>
+                 name, gender, age, eye-color, hair-color, -->
+            <!-- <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> 
+            </div> -->
 
         </section>
 
@@ -61,7 +94,7 @@
 
     <footer>
         <div class="sliding-banner">
-        
+
         </div>
     </footer>
 
