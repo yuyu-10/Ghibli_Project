@@ -1,0 +1,38 @@
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: Cabin;
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 200px;
+    color: #333;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 190px;
+    cursor: pointer;
+    /* background: rgba(255, 166, 0, 0.596); */
+}
+
+h1 span {
+    pointer-events: none;
+}
+
+.container {
+    text-align: center;
+    perspective: 1000px;
+}
+
+#hover {
+    text-decoration: none;
+}

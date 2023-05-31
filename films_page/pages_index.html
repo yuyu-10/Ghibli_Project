@@ -17,9 +17,39 @@
 </head>
 
 <body>
+
     <header>
-        <div>
+        <!-- <div>
             <a href="/index.html"><img src="/image/pngegg.png" alt="" id="ghibli_logo"></a>
+        </div> -->
+
+        <div id="head">
+            <div style="width: 30%;">
+                <a href="/enter/accueil.html"><img src="/enter/pngegg.png" alt="" id="ghibli_logo"></a>
+            </div>
+            <!-- début menu Johan -->
+            <div style="width:50%">
+                <nav>
+                    <ul>
+                        <li class="menuItem"><a href="/enter/accueil.html">Accueil</a></li>
+                        <li class="deroulant menuItem">
+                            <a href="#">Films</a>
+                            <div id="containerSubmenu">
+                                <div id="sous">
+                                    <ul id="sous3">
+                                    </ul>
+                                </div>
+                                <div id="sous2">
+                                    <ul id="sous4">
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menuItem"><a href="/last_news/news.html">Actus</a></li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
     </header>
 
@@ -47,44 +77,40 @@
 
         <section id="film_information">
             <!-- film informations-->
-            <h2 class="info">Director</h2>
-            <div class="line"></div>
-            <p id="movie_director"></p>
+            <div class="div">
+                <h2 class="info">Director</h2>
+                <div class="line"></div>
+                <p id="movie_director"></p>
+            </div>
 
-            <h2 class="info">Producer</h2>
-            <div class="line"></div>
-            <p id="movie_producer"></p>
+            <div class="div">
+                <h2 class="info">Producer</h2>
+                <div class="line"></div>
+                <p id="movie_producer"></p>
+            </div>
 
-            <h2 class="info">Release date</h2>
-            <div class="line"></div>
-            <p id="movie_release_date"></p>
+            <div class="div">
+                <h2 class="info">Release date</h2>
+                <div class="line"></div>
+                <p id="movie_release_date"></p>
+            </div>
 
-            <h2 class="info">Time</h2>
-            <div class="line"></div>
-            <p id="movie_time"></p>
+            <div class="div">
+                <h2 class="info">Time</h2>
+                <div class="line"></div>
+                <p id="movie_time"></p>
+            </div>
 
-            <!-- <h2 class="info">People</h2>
-            <div class="line"></div>
-            <div id="people_carte">
-                <p id="people_name"></p>
-                <p id="people_gender"></p>
-                <p id="people_age"></p>
-                <p id="people_eye_color"></p>
-                <p id="people_hair_color"></p>
-            </div> -->
-
-
-            <!-- personnages -->
-            <!-- <div id="movie_people">
-                <div id="people_name"></div>
-                 name, gender, age, eye-color, hair-color, -->
-            <!-- <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul> 
+            <!-- <div class="div">
+                <h2 class="info">People</h2>
+                <div class="line"></div>
+                <div id="people_carte">
+                    <p id="people_name"></p>
+                    <p id="people_gender"></p>
+                    <p id="people_age"></p>
+                    <p id="people_eye_color"></p>
+                    <p id="people_hair_color"></p>
+                </div>
             </div> -->
 
         </section>
@@ -98,9 +124,13 @@
         </div>
     </footer>
 
-    <script src="/films_page/pages_script.js"></script>
+    <!-- <script src="/films_page/pages_script.js"></script>
     <script src="/films_page/pageapis.js"></script>
-    <script src="/script.js"></script>
+    <script src="/script.js"></script> -->
+
+    <script src="/enter/data.js"></script>
+    <script src="/films_page/pages_script_v2.js"></script>
+    <script src="/enter/script_v2.js"></script>
 
 </body>
 

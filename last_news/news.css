@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("totoro_background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img {
+  height: 150px;
+}
+
+.contain .text {
+  position: fixed;
+  right: 200px;
+  width: 30%;
+  height: 30%;
+  top: 10%;
+  z-index: 1;
+  text-align: right;
+  font-family: Georgia;
+  margin: 0 auto;
+  color: #000;
+}
+
+/* img:hover {
+  border: 2px solid #696969;
+  border-radius: 8px;
+  padding: 5px;
+} */
+
+.main-container {
+  padding: 30px;
+}
+
+/* HEADING */
+
+.heading {
+  width: 50%;
+  position: relative;
+  bottom: 120px;
+  left: 25%;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 30px;
+}
+
+.heading__title {
+  font-weight: 600;
+  font-family: Andale Mono, monospace, Impact;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  /* width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 50px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background: radial-gradient(#A9A9A9, #696969);
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: center;
+  color: #000;
+  font-family: Baskerville, Baskerville Old Face, Garamond, Times New Roman, serif;
+  /* height: center; */
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+
+/* RESPONSIVE
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+} */

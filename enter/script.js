@@ -1,10 +1,14 @@
 
+import './data';
+
 //----- DOM Elements:
 
 let list = document.getElementById('filmslist');
 
 let datesTimeline = document.getElementsByClassName('release_dates_timeline');
 let titlesTimeline = document.getElementsByClassName('films_title_timeline');
+
+
 
 function scrollTitles(result) {
 
@@ -17,7 +21,6 @@ function scrollTitles(result) {
         let valeur = list.options[list.selectedIndex].value;
         window.location.href = valeur;
     })
-
 }
 
 function displayTimelineRound(result) {
